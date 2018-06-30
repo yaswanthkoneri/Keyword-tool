@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-var ProductController = require('../controllers/keyword');
+var trendzController = require('../controllers/trendz');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/keywords',ProductController.getKeywords)
+router.post('/trendz',trendzController.interestOverTime)
 
 
 module.exports = router;
